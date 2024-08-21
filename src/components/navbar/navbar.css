@@ -1,0 +1,75 @@
+.gym__navbar-container{
+    height: 380px;
+    display: flex;
+    position: relative;
+}
+
+.gym__navbar-logo{
+    position: absolute;
+    width: 3.5rem;
+    padding: 1.5rem 0 0 1rem;
+    margin: 1.5rem 0 1.5rem 0.5rem;
+    cursor: pointer;
+}
+
+
+.gym__navbar-links_container{
+    margin: 2rem;
+    justify-items: center;
+}
+
+.gym__navbar-menu_container{
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 60px;
+}
+
+.gym__navbar-links_container p {
+    margin: 3rem;
+    color: transparent;
+
+}
+
+.gym__navbar-links_container a {
+    font-family: var(--font-base);
+    height: 70px;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    background: linear-gradient(to left, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+    transition: background-position 0.5s ease;
+}
+
+.gym__navbar-links_container a:hover {
+    background-position: -100% 100%;
+}
+
+.gym__navbar-logo svg {
+    fill:white;
+    animation: spin 8s linear infinite;
+    position: absolute;
+    width: 2.5rem;
+    margin: 0 0 1.5rem 0.5rem;
+    cursor: pointer;
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gym__navbar-logo svg:hover {
+    animation-play-state: paused;
+}

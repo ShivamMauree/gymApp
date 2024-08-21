@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --font-base: "Josefin Sans", sans-serif;
+    --font-alt: 'Open Sans', sans-serif;
+    --font-girrasol: "Girassol", serif;
+    --font-bona:"Bona Nova", serif;
+
+    --color-bg: #040C18;
+    --color-footer : #031B34;
+    --color-blog: #042c54;
+    --color-text: #81AFDD;
+    --color-subtext: #FF8A71;
+
+    --gradient-text: linear-gradient(90deg, rgba(182, 75, 185, 1) 0%, rgba(34, 137, 199, 1) 23%, rgba(112, 207, 247, 1) 42%, rgba(144, 65, 191, 1) 98%);
+    --gradient-bar: linear-gradient(90deg, rgba(182, 75, 185, 1) 0%, rgba(34, 137, 199, 1) 23%, rgba(112, 207, 247, 1) 42%, rgba(144, 65, 191, 1) 98%);
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-25%);
+        transform: translateY(-25%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-25%);
+        transform: translateY(-25%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
