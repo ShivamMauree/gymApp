@@ -11,7 +11,7 @@
     padding-right: 40px;
 }
 
-.gym__header-container_title  h4{
+.gym__header-container_title h4 {
     font-family: var(--font-base);
     height: 70px;
     font-size: 60px;
@@ -22,7 +22,7 @@
 }
 
 .gym__header-container_title,
-.gym__header-container_content  h1{
+.gym__header-container_content h1 {
     font-family: var(--font-base);
     font-size: 60px;
     font-weight: 400;
@@ -31,11 +31,7 @@
     margin-bottom: 1rem;
 }
 
-.gym__header-container_content_right {
-
-}
-
-.gym__header-container_content  p{
+.gym__header-container_content p {
     width: 500px;
     font-family: var(--font-base);
     font-size: 30px;
@@ -52,12 +48,12 @@
     text-align: left;
 }
 
-.gym__header-container_content  p:hover{
+.gym__header-container_content p:hover {
     background-position: -100% 100%;
 }
 
-.gym__header-container_content  {
- padding: 0 4rem 0 4rem;
+.gym__header-container_content {
+    padding: 0 4rem 0 4rem;
 }
 
 .gym__header-container_sliding_text {
@@ -68,10 +64,9 @@
 }
 
 .gym__header-container_sliding_text h1 {
-    display: inline-block; /* Make the h1 inline-block to enable transform */
+    display: inline-block;
     min-width: 100%;
     animation: slideText 20s linear infinite;
-
     font-family: var(--font-base);
     font-size: 90px;
     font-weight: 400;
@@ -86,10 +81,40 @@
     transition: background-position 0.5s ease;
     margin-bottom: 4rem;
 }
+
+.gym__header-container_sliding_text h1:hover {
+    background-position: -100% 100%;
+}
+
 @keyframes slideText {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-20%); }
 }
-.gym__header-container_sliding_text h1:hover {
-    background-position: -100% 100%;
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .gym__header-container_title h4,
+    .gym__header-container_content h1 {
+        font-size: 40px; /* Smaller font size on smaller devices */
+    }
+
+    .gym__header-container_content p {
+        font-size: 20px; /* Smaller font size for paragraphs */
+        width: auto; /* Adjust width for smaller screens */
+        padding: 0 2rem; /* Less padding on smaller screens */
+    }
+
+    .gym__header-container_sliding_text h1 {
+        font-size: 50px; /* Smaller font size for sliding text */
+    }
+}
+
+@media (max-width: 480px) {
+    .gym__header-container_title {
+        padding-right: 20px; /* Less padding on very small screens */
+    }
+
+    .gym__header-container_content {
+        padding: 0 1rem; /* Minimal padding on very small screens */
+    }
 }
