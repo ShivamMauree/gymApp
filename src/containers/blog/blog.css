@@ -16,6 +16,7 @@
     font-weight: 600;
     letter-spacing: 0.04em;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .gym__blog-container {
     display: flex;
@@ -79,6 +80,51 @@
     justify-content: center;
     margin-bottom: 2rem;
 }
-.gym__blog-information_search_container input{
 
+
+@media (max-width: 768px) {
+    .gym__blog-information_feature .gym__feature-container {
+        flex-direction: column;
+    }
+
+    .gym__blog-container_title h1 {
+        font-size: 60px;
+    }
+
+    .gym__blog-information {
+        margin: 0 2rem 1.5rem 2rem;
+    }
+
+    .gym__blog-information_features_container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .gym__blog-information_section_text h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+
+    .gym__blog-container_title h1 {
+        font-size: 45px; /* Further reduce the font size */
+    }
+
+    .gym__blog-information {
+        margin: 0 1rem 1rem 1rem; /* Further reduce margins for very small screens */
+    }
+
+    .gym__blog-information_section_text h1 {
+        font-size: 28px; /* Even smaller font size for section titles */
+        line-height: 32px;
+    }
+
+    .gym__blog-information_search_container {
+        flex-direction: column;
+        padding: 1rem;
+    }
 }

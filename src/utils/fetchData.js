@@ -6,7 +6,7 @@ export const exerciseOptions = {
     }
 };
 
-export const exerciseUrl= 'https://exercisedb.p.rapidapi.com/exercises';
+export const exerciseUrl = 'https://exercisedb.p.rapidapi.com/exercises?limit=1000';
 
 
 
