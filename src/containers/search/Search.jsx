@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./search.css";
 import {exerciseUrl, exerciseOptions, fetchData, bodypartExcerciseUrl} from "../../utils/fetchData";
+import ExercisePage from   "../../components/exercise/Exercise"
 
 const Search = () => {
     const [search, setSearch] = useState('');
@@ -8,17 +9,17 @@ const Search = () => {
     const [bodyParts, setBodyParts] = useState([]);
     const [color, setColor] = useState('#3a3a3a');
 
-    useEffect(() => {
-        const fetchExercisesData = async () => {
-            const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-            setBodyParts(['all', ...bodyPartsData]);
-        };
-        fetchExercisesData();
-    }, []);
-
-    useEffect(() => {
-        console.log('Updated body parts:', bodyParts);
-    }, [bodyParts]);
+    // useEffect(() => {
+    //     const fetchExercisesData = async () => {
+    //         const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+    //         setBodyParts(['all', ...bodyPartsData]);
+    //     };
+    //     fetchExercisesData();
+    // }, []);
+    //
+    // useEffect(() => {
+    //     console.log('Updated body parts:', bodyParts);
+    // }, [bodyParts]);
 
     const handlePartSearch = async (parts) => {
         try {
@@ -30,7 +31,7 @@ const Search = () => {
 
             const combinedExercises = results.flat();
             setExercises(combinedExercises);
-            console.log(combinedExercises); // Logging combined results for better debugging
+            console.log(exercises); // Logging combined results for better debugging
         } catch (error) {
             console.error('Failed to fetch exercises:', error);
         }
@@ -57,13 +58,13 @@ const Search = () => {
         <div className="gym__search-container app__bg">
             <div className="gym__search-upper_section">
                 <div className="gym__search-title">
-                    <h1>Discover Your Workout Today. Find the Perfect Exercise for Tomorrow and Make It Yours!</h1>
+                    <h1>Discover Your Workout Today. Find the Perfect ExercisePage for Tomorrow and Make It Yours!</h1>
                 </div>
                 <div className="gym__search-bar">
                     <input
                         type="text"
                         value={search}
-                        placeholder="Search For Your Exercise"
+                        placeholder="Search For Your ExercisePage"
                         onChange={(e) => setSearch(e.target.value.toLowerCase())}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
@@ -77,7 +78,7 @@ const Search = () => {
 
                 {/*<Bodypart title="Arms" svgContent={armSvg} />*/}
 
-                <div className="body_part-container" onClick={()=> handlePartSearch(['lower arms', 'upper arms'])}>
+                <div className="body_part-container" onClick={() => handlePartSearch(['lower arms', 'upper arms'])}>
                     <div className="body_part">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.36 140.45">
                             <defs>
@@ -263,7 +264,24 @@ const Search = () => {
                     <h1> Shoulders </h1>
                 </div>
 
+            </div>
 
+            <div className="gym__search-results">
+                <div className="gym__search-results_header">
+                    <h1> Showing Results</h1>
+                    <div></div>
+                </div>
+                <div className="gym__search-results_container">
+                    {exercises.map((exercise, index) => (
+                        <Exercise key={exercise.name + index}
+                                  name={exercise.name}
+                                  equipment={exercise.equipment}
+                                  gifURL={exercise.gifUrl}
+                                  target={exercise.target}
+                                  secondaryMuscles={exercise.secondaryMuscles}
+                                  instruction={exercise.instructions}/>
+                    ))}
+                </div>
             </div>
         </div>
     );
