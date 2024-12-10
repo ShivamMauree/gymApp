@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./search.css";
 import {exerciseUrl, exerciseOptions, fetchData, bodypartExcerciseUrl} from "../../utils/fetchData";
-import ExercisePage from   "../../components/exercise/Exercise"
+import Exercise from   "../../components/exercise/Exercise"
 
 const Search = () => {
     const [search, setSearch] = useState('');
@@ -31,7 +31,7 @@ const Search = () => {
 
             const combinedExercises = results.flat();
             setExercises(combinedExercises);
-            console.log(exercises); // Logging combined results for better debugging
+             console.log(exercises); // Logging combined results for better debugging
         } catch (error) {
             console.error('Failed to fetch exercises:', error);
         }
@@ -279,7 +279,8 @@ const Search = () => {
                                   gifURL={exercise.gifUrl}
                                   target={exercise.target}
                                   secondaryMuscles={exercise.secondaryMuscles}
-                                  instruction={exercise.instructions}/>
+                                  instruction={exercise.instructions}
+                                  id={exercise.id}/>
                     ))}
                 </div>
             </div>

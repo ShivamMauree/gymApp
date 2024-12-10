@@ -6,6 +6,14 @@ export const exerciseOptions = {
     }
 };
 
+export const videoOptions = {
+    method: 'GET',
+    headers: {
+        'x-rapidapi-key': '79d1475719msh6751d0f61bd3851p1d4882jsnde1184e6cefb',
+        'x-rapidapi-host': 'youtube-search-and-download.p.rapidapi.com'
+    }
+};
+
 export const exerciseUrl = 'https://exercisedb.p.rapidapi.com/exercises?limit=1000';
 export const bodypartExcerciseUrl='https://exercisedb.p.rapidapi.com/exercises/bodyPart/back?limit=1000';
 

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {BsFillPlayFill, BsFillPauseFill} from "react-icons/bs";
 import './blog.css';
-import video from '../../assets/video.mp4';
+// import video from '../../assets/video.mp4';
 import {Feature} from '../../components';
 
 const Blog = () => {
