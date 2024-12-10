@@ -1,0 +1,41 @@
+.gym__exercise_featurette-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gym__exercise_featurette-container h1{
+    font-size: 20px;
+    font-family:var(--font-base);
+    background: url('../../assets/bg.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+
+    max-width: 200px;
+}
+
+.gym__exercise_featurette-container-gif{
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+    width: 150px;
+    height: 200px;
+    animation: profile_animate 8s ease-in-out infinite 1s;
+    overflow: hidden;
+
+    margin:0 2rem 2rem 2rem;
+}
+.gym__exercise_featurette-container-gif img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

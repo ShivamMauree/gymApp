@@ -1,0 +1,341 @@
+.gym__exercise_page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* To make sure it is on top of the page but still below the close button */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px; /* Optional: Add padding if needed for spacing */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+
+}
+.gym__exercise_page-generic{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+
+.gym__exercise_page-container{
+    border-radius: 0.5rem;
+    margin:8rem 4rem 2rem 4rem;
+    display: flex;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.gym__exercise_page-gif {
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+    width: 400px;
+    height: 400px;
+    animation: profile_animate 8s ease-in-out infinite 1s;
+    overflow: hidden;
+
+    margin:0 2rem 2rem 2rem;
+}
+
+.gym__exercise_page-gif-small {
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+    width: 400px;
+    height: 400px;
+    animation: profile_animate 8s ease-in-out infinite 1s;
+    overflow: hidden;
+
+    margin:0 2rem 2rem 2rem;
+    display:none;
+}
+
+.gym__exercise_page-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes profile_animate {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.gym__exercise_page-muscle_image{
+width: 60px;
+}
+
+.gym__exercise_page-upper_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-left: 3rem;
+    margin-bottom:3rem;
+}
+
+.gym__exercise-info{
+    max-width: 720px;
+    text-align: left;
+}
+
+.gym__exercise-info p{
+    font-family: var(--font-base);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background: url('../../assets/bg.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+}
+
+.gym__exercise_page-title{
+    margin-bottom: 2rem;
+}
+.gym__exercise_page-title h1{
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.gym__exercise_page-muscle_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gym__exercise_page-muscle_info{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gym__exercise_page-muscle_info h4{
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.gym__exercise_page-instruction{
+    font-family: var(--font-base);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background: url('../../assets/bg.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+}
+
+.gym__exercise_page-line_segment{
+
+    margin:0 6rem 0 6rem;
+    height: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.8rem;
+    border-radius: 0.2rem;
+}
+
+.gym__exercise_page-section_title h1{
+    margin:0 6rem 0 6rem;
+    font-family: var(--font-base);
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #fff;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.gym__exercise_page-bodyparts{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+.gym__exercise_page-display_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gym__exercise_page-arrow_buttons{
+    width: 48px;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 1140px) {
+    .gym__exercise_page-upper_container{
+        flex-direction: column;
+    }
+
+    .gym__exercise_page-gif{
+        display:none;
+    }
+
+    .gym__exercise_page-gif-small{
+        display:flex;
+        justify-self: center;
+    }
+
+    .gym__exercise-info{
+        justify-self:center;
+    }
+
+    .gym__exercise_page-section_title{
+        justify-self: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gym__exercise_page {
+        padding: 10px;
+    }
+
+    .gym__exercise_page-container {
+        margin: 6rem 2rem 1rem 2rem;
+        padding-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gym__exercise_page-gif {
+        width: 300px;
+        height: 300px;
+        margin: 1rem 0;
+    }
+
+    .gym__exercise_page-gif-small {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gym__exercise_page-upper_container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .gym__exercise-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .gym__exercise-info p {
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .gym__exercise_page-title h1 {
+        font-size: 30px;
+        line-height: 28px;
+    }
+
+    .gym__exercise_page-section_title h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .gym__exercise_page-muscle_image {
+        width: 50px;
+    }
+
+    .gym__exercise_page-muscle_container {
+        align-items: center;
+    }
+
+    .gym__exercise_page-muscle_info h4 {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .gym__exercise_page {
+        padding: 8px;
+    }
+
+    .gym__exercise_page-container {
+        margin: 4rem 1rem 1rem 1rem;
+    }
+
+    .gym__exercise_page-gif,
+    .gym__exercise_page-gif-small {
+        width: 250px;
+        height: 250px;
+    }
+
+    .gym__exercise_page-title h1 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .gym__exercise-info p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .gym__exercise_page-section_title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .gym__exercise_page-muscle_info h4 {
+        font-size: 16px;
+    }
+
+    .gym__exercise_page-muscle_container {
+        align-items: center;
+    }
+
+    .gym__exercise_page-line_segment {
+        margin: 0 1rem;
+    }
+
+    .gym__exercise_page-bodyparts {
+        margin: 1rem 0;
+        align-items: center;
+    }
+
+}
